@@ -214,20 +214,15 @@ public class CarRental extends JFrame {
 
                 if (maker.isEmpty()) {
                     throw new IllegalArgumentException(EMPTY_MAKER.getValue());
-                }
-                if (model.isEmpty()) {
+                } else if (model.isEmpty()) {
                     throw new IllegalArgumentException(EMPTY_MODEL.getValue());
-                }
-                if (yearText.isEmpty()) {
+                } else if (yearText.isEmpty()) {
                     throw new IllegalArgumentException(EMPTY_YEAR.getValue());
-                }
-                if (color.isEmpty()) {
+                } else if (color.isEmpty()) {
                     throw new IllegalArgumentException(EMPTY_COLOR.getValue());
-                }
-                if (plate.isEmpty()) {
+                } else if (plate.isEmpty()) {
                     throw new IllegalArgumentException(EMPTY_PLATE.getValue());
-                }
-                if (priceText.isEmpty()) {
+                } else if (priceText.isEmpty()) {
                     throw new IllegalArgumentException(EMPTY_PRICE.getValue());
                 }
 
