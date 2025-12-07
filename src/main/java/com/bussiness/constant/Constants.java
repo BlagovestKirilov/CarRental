@@ -71,7 +71,7 @@ public enum Constants {
     YEAR_OUT_OF_RANGE("Year must be between 1900 and %d"),
     INVALID_PRICE("Daily price must be a valid number"),
     PRICE_LESS_THAN_ZERO("Daily price must be greater than 0"),
-    WIDTH_SIZE("800"),
+    WIDTH_SIZE("1000"),
     HEIGHT_SIZE("400"),
     CLICK_COUNT("2"),
     ZERO("0"),
