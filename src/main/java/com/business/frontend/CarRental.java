@@ -212,17 +212,17 @@ public class CarRental extends JFrame {
 
                 boolean rented = cbRented.isSelected();
 
-                if (maker.isEmpty()) {
+                if (maker.isBlank()) {
                     throw new IllegalArgumentException(EMPTY_MAKER.getValue());
-                } else if (model.isEmpty()) {
+                } else if (model.isBlank()) {
                     throw new IllegalArgumentException(EMPTY_MODEL.getValue());
-                } else if (yearText.isEmpty()) {
+                } else if (yearText.isBlank()) {
                     throw new IllegalArgumentException(EMPTY_YEAR.getValue());
-                } else if (color.isEmpty()) {
+                } else if (color.isBlank()) {
                     throw new IllegalArgumentException(EMPTY_COLOR.getValue());
-                } else if (plate.isEmpty()) {
+                } else if (plate.isBlank()) {
                     throw new IllegalArgumentException(EMPTY_PLATE.getValue());
-                } else if (priceText.isEmpty()) {
+                } else if (priceText.isBlank()) {
                     throw new IllegalArgumentException(EMPTY_PRICE.getValue());
                 }
 
