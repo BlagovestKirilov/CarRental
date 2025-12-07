@@ -1,22 +1,22 @@
-CREATE DATABASE CarRental;
+CREATE DATABASE car_rental;
 
-CREATE TABLE Cars
+CREATE TABLE cars
 (
-    Id           INT IDENTITY (1,1) PRIMARY KEY,
-    Maker        NVARCHAR(100)  NOT NULL,
-    Model        NVARCHAR(100)  NOT NULL,
-    Year         INT            NOT NULL,
-    Color        NVARCHAR(50)   NOT NULL,
-    LicensePlate NVARCHAR(50)   NOT NULL,
-    DailyPrice   DECIMAL(10, 2) NOT NULL,
-    IsRented     BIT            NOT NULL DEFAULT 0
+    id            INT IDENTITY (1,1) PRIMARY KEY,
+    maker         NVARCHAR(100)  NOT NULL,
+    model         NVARCHAR(100)  NOT NULL,
+    year          INT            NOT NULL,
+    color         NVARCHAR(50)   NOT NULL,
+    license_plate NVARCHAR(50)   NOT NULL,
+    daily_price   DECIMAL(10, 2) NOT NULL,
+    is_rented     BIT            NOT NULL DEFAULT 0
 );
 
-INSERT INTO Cars (Maker, Model, Year, Color, LicensePlate, DailyPrice, IsRented)
+INSERT INTO Cars (maker, model, year, color, license_plate, daily_price, is_rented)
 VALUES ('Volkswagen', 'Golf 5', 2008, 'Silver', 'KH1234AB', 100.00, 0);
 
-INSERT INTO Cars (Maker, Model, Year, Color, LicensePlate, DailyPrice, IsRented)
+INSERT INTO Cars (maker, model, year, color, license_plate, daily_price, is_rented)
 VALUES ('BMW', 'X5', 2022, 'Black', 'CB5678CK', 90.00, 0);
 
-INSERT INTO Cars (Maker, Model, Year, Color, LicensePlate, DailyPrice, IsRented)
+INSERT INTO Cars (maker, model, year, color, license_plate, daily_price, is_rented)
 VALUES ('Ford', 'Focus', 2019, 'Blue', 'CA9012EP', 40.00, 1);
