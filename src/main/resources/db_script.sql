@@ -13,10 +13,10 @@ CREATE TABLE cars
 );
 
 INSERT INTO Cars (maker, model, year, color, license_plate, daily_price, is_rented)
-VALUES ('Volkswagen', 'Golf 5', 2008, 'Silver', 'KH1234AB', 100.00, 0);
+VALUES ('VOLKSWAGEN', 'GOLF 5', 2008, 'SILVER', 'KH1234AB', 100.00, 0);
 
 INSERT INTO Cars (maker, model, year, color, license_plate, daily_price, is_rented)
-VALUES ('BMW', 'X5', 2022, 'Black', 'CB5678CK', 90.00, 0);
+VALUES ('BMW', 'X5', 2022, 'BLACK', 'CB5678CK', 90.00, 0);
 
 INSERT INTO Cars (maker, model, year, color, license_plate, daily_price, is_rented)
-VALUES ('Ford', 'Focus', 2019, 'Blue', 'CA9012EP', 40.00, 1);
+VALUES ('FORD', 'FOCUS', 2019, 'BLUE', 'CA9012EP', 40.00, 1);
