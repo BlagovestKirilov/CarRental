@@ -69,13 +69,13 @@ import static com.bussiness.constant.Constants.YEAR_OUT_OF_RANGE;
 import static com.bussiness.constant.Constants.YES_OPTION;
 import static com.bussiness.constant.Constants.ZERO;
 
-public class CarRentalApp extends JFrame {
+public class CarRental extends JFrame {
 
     private final CarService carService = new CarService();
     private final DefaultTableModel tableModel;
     private final JTable table;
 
-    public CarRentalApp() {
+    public CarRental() {
         setTitle(TITLE.getValue());
         setSize(WIDTH_SIZE.getNumberValue(), HEIGHT_SIZE.getNumberValue());
         setDefaultCloseOperation(EXIT_ON_CLOSE);

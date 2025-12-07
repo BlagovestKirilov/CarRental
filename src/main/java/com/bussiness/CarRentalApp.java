@@ -1,11 +1,13 @@
 package com.bussiness;
 
+import com.bussiness.frontend.CarRental;
+
 import javax.swing.*;
 
 public class CarRentalApp {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
-            com.bussiness.frontend.CarRentalApp app = new com.bussiness.frontend.CarRentalApp();
+            CarRental app = new CarRental();
             app.setVisible(true);
         });
     }
