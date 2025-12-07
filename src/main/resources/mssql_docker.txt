@@ -1,0 +1,5 @@
+docker pull mcr.microsoft.com/mssql/server:2022-latest
+
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=Password12345" -p 1433:1433 --name car_rental_sql -d mcr.microsoft.com/mssql/server:2022-latest
+
+docker exec -it car_rental_sql /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P Password12345
