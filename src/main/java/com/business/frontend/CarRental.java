@@ -214,7 +214,7 @@ public class CarRental extends JFrame {
 
                 if (maker.isBlank()) {
                     throw new IllegalArgumentException(EMPTY_MAKER.getValue());
-                } else if (model.isBlank()) {
+                } else if (model.isEmpty()) {
                     throw new IllegalArgumentException(EMPTY_MODEL.getValue());
                 } else if (yearText.isBlank()) {
                     throw new IllegalArgumentException(EMPTY_YEAR.getValue());
@@ -247,8 +247,15 @@ public class CarRental extends JFrame {
                 }
 
                 if (car == null) {
-                    Car newCar = new Car(null, maker, model, year, color, plate, price, rented);
-                    carService.save(newCar);
+                    carService.save(Car.builder()
+                            .maker(maker)
+                            .model(model)
+                            .year(year)
+                            .color(color)
+                            .licensePlate(plate)
+                            .dailyPrice(price)
+                            .isRented(rented)
+                            .build());
                 } else {
                     car.setMaker(maker);
                     car.setModel(model);
