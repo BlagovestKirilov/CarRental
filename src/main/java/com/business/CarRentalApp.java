@@ -1,6 +1,6 @@
-package com.bussiness;
+package com.business;
 
-import com.bussiness.frontend.CarRental;
+import com.business.frontend.CarRental;
 
 import javax.swing.*;
 

@@ -1,15 +1,15 @@
-package com.bussiness.util;
+package com.business.util;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-import static com.bussiness.constant.Constants.DATABASE;
-import static com.bussiness.constant.Constants.HOST;
-import static com.bussiness.constant.Constants.PASSWORD;
-import static com.bussiness.constant.Constants.PORT;
-import static com.bussiness.constant.Constants.URL;
-import static com.bussiness.constant.Constants.USER;
+import static com.business.enums.Constants.DATABASE;
+import static com.business.enums.Constants.HOST;
+import static com.business.enums.Constants.PASSWORD;
+import static com.business.enums.Constants.PORT;
+import static com.business.enums.Constants.URL;
+import static com.business.enums.Constants.USER;
 
 public class DatabaseUtil {
 

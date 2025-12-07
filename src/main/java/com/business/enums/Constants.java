@@ -1,4 +1,4 @@
-package com.bussiness.constant;
+package com.business.enums;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

@@ -1,7 +1,7 @@
-package com.bussiness.repository;
+package com.business.repository;
 
-import com.bussiness.model.Car;
-import com.bussiness.util.DatabaseUtil;
+import com.business.model.Car;
+import com.business.util.DatabaseUtil;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -12,19 +12,19 @@ import java.sql.Types;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.bussiness.constant.Constants.COLOR;
-import static com.bussiness.constant.Constants.DAILY_PRICE;
-import static com.bussiness.constant.Constants.DELETE_QUERY;
-import static com.bussiness.constant.Constants.FIND_ALL_QUERY;
-import static com.bussiness.constant.Constants.FIND_BY_ID_QUERY;
-import static com.bussiness.constant.Constants.ID;
-import static com.bussiness.constant.Constants.IS_RENTED;
-import static com.bussiness.constant.Constants.LICENSE_PLATE;
-import static com.bussiness.constant.Constants.MAKER;
-import static com.bussiness.constant.Constants.MODEL;
-import static com.bussiness.constant.Constants.SAVE_QUERY;
-import static com.bussiness.constant.Constants.UPDATE_QUERY;
-import static com.bussiness.constant.Constants.YEAR;
+import static com.business.enums.Constants.COLOR;
+import static com.business.enums.Constants.DAILY_PRICE;
+import static com.business.enums.Constants.DELETE_QUERY;
+import static com.business.enums.Constants.FIND_ALL_QUERY;
+import static com.business.enums.Constants.FIND_BY_ID_QUERY;
+import static com.business.enums.Constants.ID;
+import static com.business.enums.Constants.IS_RENTED;
+import static com.business.enums.Constants.LICENSE_PLATE;
+import static com.business.enums.Constants.MAKER;
+import static com.business.enums.Constants.MODEL;
+import static com.business.enums.Constants.SAVE_QUERY;
+import static com.business.enums.Constants.UPDATE_QUERY;
+import static com.business.enums.Constants.YEAR;
 
 public class CarRepository {
     public List<Car> findAll() {
@@ -46,7 +46,7 @@ public class CarRepository {
                         .build());
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            throw new RuntimeException(e.getMessage(), e);
         }
         return list;
     }
@@ -72,7 +72,7 @@ public class CarRepository {
                 }
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            throw new RuntimeException(e.getMessage(), e);
         }
     }
 
@@ -91,7 +91,7 @@ public class CarRepository {
             ps.setLong(8, car.getId());
             ps.executeUpdate();
         } catch (SQLException e) {
-            e.printStackTrace();
+            throw new RuntimeException(e.getMessage(), e);
         }
     }
 
@@ -101,7 +101,7 @@ public class CarRepository {
             ps.setLong(1, id);
             ps.executeUpdate();
         } catch (SQLException e) {
-            e.printStackTrace();
+            throw new RuntimeException(e.getMessage(), e);
         }
     }
 
@@ -124,7 +124,7 @@ public class CarRepository {
                 }
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            throw new RuntimeException(e.getMessage(), e);
         }
         return null;
     }

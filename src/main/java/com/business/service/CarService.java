@@ -1,27 +1,27 @@
-package com.bussiness.service;
+package com.business.service;
 
-import com.bussiness.model.Car;
-import com.bussiness.repository.CarRepository;
+import com.business.model.Car;
+import com.business.repository.CarRepository;
 import lombok.extern.log4j.Log4j2;
 
 import java.util.List;
 
-import static com.bussiness.constant.LogMessages.CAR_DELETE_ERROR;
-import static com.bussiness.constant.LogMessages.CAR_DELETE_START;
-import static com.bussiness.constant.LogMessages.CAR_DELETE_SUCCESS;
-import static com.bussiness.constant.LogMessages.CAR_FIND_ALL_ERROR;
-import static com.bussiness.constant.LogMessages.CAR_FIND_ALL_START;
-import static com.bussiness.constant.LogMessages.CAR_FIND_ALL_SUCCESS;
-import static com.bussiness.constant.LogMessages.CAR_FIND_BY_ID_START;
-import static com.bussiness.constant.LogMessages.CAR_FIND_BY_ID_SUCCESS;
-import static com.bussiness.constant.LogMessages.CAR_NOT_FOUND;
-import static com.bussiness.constant.LogMessages.CAR_SAVE_ERROR;
-import static com.bussiness.constant.LogMessages.CAR_SAVE_START;
-import static com.bussiness.constant.LogMessages.CAR_SAVE_SUCCESS;
-import static com.bussiness.constant.LogMessages.CAR_UPDATE_ERROR;
-import static com.bussiness.constant.LogMessages.CAR_UPDATE_START;
-import static com.bussiness.constant.LogMessages.CAR_UPDATE_SUCCESS;
-import static com.bussiness.constant.LogMessages.ERROR_FETCHING_CAR;
+import static com.business.enums.LogMessages.CAR_DELETE_ERROR;
+import static com.business.enums.LogMessages.CAR_DELETE_START;
+import static com.business.enums.LogMessages.CAR_DELETE_SUCCESS;
+import static com.business.enums.LogMessages.CAR_FIND_ALL_ERROR;
+import static com.business.enums.LogMessages.CAR_FIND_ALL_START;
+import static com.business.enums.LogMessages.CAR_FIND_ALL_SUCCESS;
+import static com.business.enums.LogMessages.CAR_FIND_BY_ID_START;
+import static com.business.enums.LogMessages.CAR_FIND_BY_ID_SUCCESS;
+import static com.business.enums.LogMessages.CAR_NOT_FOUND;
+import static com.business.enums.LogMessages.CAR_SAVE_ERROR;
+import static com.business.enums.LogMessages.CAR_SAVE_START;
+import static com.business.enums.LogMessages.CAR_SAVE_SUCCESS;
+import static com.business.enums.LogMessages.CAR_UPDATE_ERROR;
+import static com.business.enums.LogMessages.CAR_UPDATE_START;
+import static com.business.enums.LogMessages.CAR_UPDATE_SUCCESS;
+import static com.business.enums.LogMessages.ERROR_FETCHING_CAR;
 
 @Log4j2
 public class CarService {
@@ -72,7 +72,7 @@ public class CarService {
             carRepository.save(car);
             log.info(CAR_SAVE_SUCCESS.getValue());
         } catch (Exception e) {
-            log.error(CAR_SAVE_ERROR.getValue(), e);
+            log.error(CAR_SAVE_ERROR.getValue(), car.getMaker(), car.getModel(), e);
             throw new RuntimeException(e);
         }
     }
@@ -84,7 +84,7 @@ public class CarService {
             carRepository.update(car);
             log.info(CAR_UPDATE_SUCCESS.getValue(), car.getId());
         } catch (Exception e) {
-            log.error(CAR_UPDATE_ERROR.getValue(), e);
+            log.error(CAR_UPDATE_ERROR.getValue(), car.getId(), e);
             throw new RuntimeException(e);
         }
     }
@@ -96,7 +96,7 @@ public class CarService {
             carRepository.delete(carId);
             log.info(CAR_DELETE_SUCCESS.getValue(), carId);
         } catch (Exception e) {
-            log.error(CAR_DELETE_ERROR.getValue(), e);
+            log.error(CAR_DELETE_ERROR.getValue(), carId, e);
             throw new RuntimeException(e);
         }
     }

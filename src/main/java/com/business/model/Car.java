@@ -1,4 +1,4 @@
-package com.bussiness.model;
+package com.business.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
